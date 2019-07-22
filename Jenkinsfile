@@ -10,7 +10,8 @@ node {
             // Don't run concurrent builds for a branch, because they use the same workspace directory
             disableConcurrentBuilds()
     ])
-
+    def mvnHome  = '/opt/apache-maven-3.6.1'
+    def javeHome = '/opt/jdk1.8.0_212'
 
     Maven mvn = new MavenLocal(this, mvnHome, javaHome)
     Git git = new Git(this)
