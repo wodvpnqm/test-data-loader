@@ -11,7 +11,8 @@ node {
             disableConcurrentBuilds()
     ])
 
-    def javaHome = tool 'JDK8'
+    def mavenHome = tool 'MAVEN_HOME'
+    def javaHome = tool 'JAVA_HOME'
 
     Maven mvn = new MavenLocal(this, mvnHome, javaHome)
     Git git = new Git(this)
