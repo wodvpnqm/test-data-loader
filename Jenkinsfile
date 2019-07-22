@@ -11,7 +11,6 @@ node {
             disableConcurrentBuilds()
     ])
 
-    def mvnHome = tool 'M3'
     def javaHome = tool 'JDK8'
 
     Maven mvn = new MavenLocal(this, mvnHome, javaHome)
